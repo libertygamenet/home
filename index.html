@@ -57,6 +57,40 @@
       svg {
         transform: scaleX(-1); /* Flip icons horizontally for RTL */
       }
+      /* Custom scrollbar styles */
+      .scrollbar-thin {
+        scrollbar-width: thin;
+      }
+
+      .scrollbar-thin::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .scrollbar-thin::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 3px;
+      }
+
+      .dark .scrollbar-thin::-webkit-scrollbar-track {
+        background: #374151;
+      }
+
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background: #3b82f6;
+        border-radius: 3px;
+      }
+
+      .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background: #2563eb;
+      }
+
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+        background: #60a5fa;
+      }
+
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6;
+      }
     </style>
   </head>
 
@@ -221,204 +255,358 @@
               >(PS5)</span
             >
           </div>
-          <div class="grid grid-cols-1 gap-2 text-sm max-h-80 overflow-y-auto">
-            <!-- Original Games -->
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>FC26</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Tekken 8</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>UFC 5</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>W2K25</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>NBA2K26</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Crash CTR</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Call of Duty</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Black Myth Wukong</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Ghost of Yotei</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Ghost of Tsushima</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>God of War Ragnarok</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>It Takes Two</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>A Way Out</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Split Fiction</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Rocket League</span>
+
+          <!-- Scroll indicator at top -->
+          <div
+            class="flex items-center justify-center mb-2 text-xs text-gray-500 dark:text-gray-400"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-3 w-3 ml-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+            <span>برای دیدن بازی‌های بیشتر، اسکرول کنید</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-3 w-3 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+
+          <!-- Games container with visible scrollbar and gradient fade -->
+          <div class="relative">
+            <!-- Top fade gradient -->
+            <div
+              class="absolute top-0 left-0 right-0 h-3 bg-gradient-to-b from-white dark:from-gray-800 to-transparent z-10 pointer-events-none"
+            ></div>
+
+            <!-- Games list with custom scrollbar -->
+            <div
+              class="grid grid-cols-1 gap-2 text-sm max-h-80 overflow-y-auto px-1 py-3 scrollbar-thin scrollbar-thumb-blue-500 dark:scrollbar-thumb-blue-400 scrollbar-track-gray-200 dark:scrollbar-track-gray-700"
+              style="scrollbar-width: thin; scrollbar-color: #3b82f6 #e5e7eb"
+            >
+              <!-- Original Games -->
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>FC26</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Tekken 8</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>UFC 5</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>W2K25</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>NBA2K26</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Crash CTR</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Call of Duty</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Black Myth Wukong</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Ghost of Yotei</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Ghost of Tsushima</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>God of War Ragnarok</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>It Takes Two</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>A Way Out</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Split Fiction</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Rocket League</span>
+              </div>
+
+              <!-- New Games Added -->
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Mortal Combat 1 (Definitive Edition)</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Unravel 1 & 2</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Gang Beasts</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Red Dead Redemption II</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>GTA V</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>The Last of Us Part I & II</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Overcooked! 2</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Prince of Persia</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Devil May Cry</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Injustice</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Horizon Zero Dawn</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Spider-Man</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>DiRT 5</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Watch Dogs: Legion</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Hogwarts Legacy</span>
+              </div>
+              <div
+                class="flex items-center py-1.5 px-2 rounded hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <span
+                  class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
+                ></span>
+                <span>Dying Light 2</span>
+              </div>
             </div>
 
-            <!-- New Games Added -->
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Mortal Combat 1 (Definitive Edition)</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Unravel 1 & 2</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Gang Beasts</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Red Dead Redemption II</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>GTA V</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>The Last of Us Part I & II</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Overcooked! 2</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Prince of Persia</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Devil May Cry</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Injustice</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Horizon Zero Dawn</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Spider-Man</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>DiRT 5</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Watch Dogs: Legion</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Hogwarts Legacy</span>
-            </div>
-            <div class="flex items-center py-1">
-              <span
-                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-3 flex-shrink-0"
-              ></span>
-              <span>Dying Light 2</span>
-            </div>
+            <!-- Bottom fade gradient -->
+            <div
+              class="absolute bottom-0 left-0 right-0 h-3 bg-gradient-to-t from-white dark:from-gray-800 to-transparent z-10 pointer-events-none"
+            ></div>
           </div>
-          <div
-            class="mt-3 text-xs text-gray-500 dark:text-gray-400 flex items-center"
-          >
-            <span
-              class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-2"
-            ></span>
-            <span>بازی‌های جدید اضافه شده</span>
+
+          <!-- Legend and scroll reminder -->
+          <div class="mt-3 space-y-2">
+            <div
+              class="text-xs text-gray-500 dark:text-gray-400 flex items-center"
+            >
+              <span
+                class="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full ml-2"
+              ></span>
+              <span>بازی‌های جدید اضافه شده</span>
+            </div>
+
+            <!-- Bottom scroll reminder -->
+            <div
+              class="flex items-center justify-center text-xs text-gray-400 dark:text-gray-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3 w-3 ml-1 animate-bounce"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                />
+              </svg>
+              <span>برای بازگشت به بالا، اسکرول کنید</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3 w-3 mr-1 animate-bounce"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                />
+              </svg>
+            </div>
           </div>
         </div>
 
