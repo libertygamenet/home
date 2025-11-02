@@ -215,9 +215,9 @@
             <!-- Working hours -->
             <div class="text-center">
               <p class="text-lg font-semibold">هر روز از ساعت ۹ تا ۳ بامداد</p>
-              <p id="openStatus" class="text-sm mt-1 text-green-200">
+              <!-- <p id="openStatus" class="text-sm mt-1 text-green-200">
                 الان بازه
-              </p>
+              </p> -->
             </div>
 
             <!-- Telegram Channel -->
@@ -988,24 +988,24 @@
         }
       });
 
-      // Check if open based on current time
-      function updateOpenStatus() {
-        const now = new Date();
-        const hour = now.getHours();
-        const openElement = document.getElementById("openStatus");
+      // // Check if open based on current time
+      // function updateOpenStatus() {
+      //   const now = new Date();
+      //   const hour = now.getHours();
+      //   const openElement = document.getElementById("openStatus");
 
-        if (hour >= 9 && hour < 15) {
-          openElement.textContent = "الان بازه";
-          openElement.className = "text-sm mt-1 text-green-200";
-        } else {
-          openElement.textContent = "الان نیستیم";
-          openElement.className = "text-sm mt-1 text-red-200";
-        }
-      }
+      //   if (hour >= 9 && hour < 15) {
+      //     openElement.textContent = "الان بازه";
+      //     openElement.className = "text-sm mt-1 text-green-200";
+      //   } else {
+      //     openElement.textContent = "الان نیستیم";
+      //     openElement.className = "text-sm mt-1 text-red-200";
+      //   }
+      // }
 
       // Initialize and update every minute
-      updateOpenStatus();
-      setInterval(updateOpenStatus, 60000);
+      // updateOpenStatus();
+      // setInterval(updateOpenStatus, 60000);
     </script>
   </body>
 </html>
