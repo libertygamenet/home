@@ -214,10 +214,10 @@
           <div class="space-y-3">
             <!-- Working hours -->
             <div class="text-center">
-              <p class="text-lg font-semibold">هر روز از ساعت ۹ تا ۳ بامداد</p>
-              <!-- <p id="openStatus" class="text-sm mt-1 text-green-200">
-                الان بازه
-              </p> -->
+              <p class="text-lg font-semibold">
+                هر روز از ساعت ۹ صبح تا ۳ بامداد
+              </p>
+              <p class="text-sm mt-1 text-white/90">(آخرین پذیرش ساعت ۱۲ شب)</p>
             </div>
 
             <!-- Telegram Channel -->
@@ -987,25 +987,6 @@
           updateDots();
         }
       });
-
-      // // Check if open based on current time
-      // function updateOpenStatus() {
-      //   const now = new Date();
-      //   const hour = now.getHours();
-      //   const openElement = document.getElementById("openStatus");
-
-      //   if (hour >= 9 && hour < 15) {
-      //     openElement.textContent = "الان بازه";
-      //     openElement.className = "text-sm mt-1 text-green-200";
-      //   } else {
-      //     openElement.textContent = "الان نیستیم";
-      //     openElement.className = "text-sm mt-1 text-red-200";
-      //   }
-      // }
-
-      // Initialize and update every minute
-      // updateOpenStatus();
-      // setInterval(updateOpenStatus, 60000);
     </script>
   </body>
 </html>
